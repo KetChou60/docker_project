@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ssh-server:
+    container_name: ssh-server
+    ports:
+      - "22:22"  # Map le port 2222 de l'hôte au port 22 du conteneur
+    build : .
+    environment:
+      - USER=user
+      - PASSWORD=password
+  
+  ansible-control:
+    container_name : ansible-control
+    build :
+      context : ./ansible-control
+    depends_on : 
+      - ssh-server
+    tty : true
+     

@@ -1,0 +1,20 @@
+#precise l'image
+FROM debian:12
+
+#installation du serveur ssh
+RUN apt-get update && apt-get install -y openssh-server sudo
+
+#cree le reprtoire necessaire au bon fonctionnement de ssh
+RUN mkdir /var/run/sshd
+
+#cree un utilisateur et un mot de passe
+RUN useradd -m user && echo "user:password" | chpasswd
+
+#attribution des droits sudo au user precedemment cree
+RUN echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+#definition du port utilise par ssh soit 22
+EXPOSE 22
+
+#dit a Docker d'executer la commande suivante par défaut lorsqu'un conteneur démarre, et execute ssh au premier plan (-D)
+CMD ["/usr/sbin/sshd", "-D"]

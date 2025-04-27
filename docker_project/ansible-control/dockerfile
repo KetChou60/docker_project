@@ -1,0 +1,13 @@
+# Utilisation de l'image AlmaLinux 9 
+FROM almalinux:9
+
+# installation de ansible et tout les complement (dnf car on utilise almalinux)
+RUN dnf install -y epel-release && \
+    dnf install -y ansible sudo openssh-clients && \
+    dnf clean all
+
+# dossier de travail
+WORKDIR /workspace
+
+# Commande lancee par defaut
+CMD ["/bin/bash"]

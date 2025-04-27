@@ -1,0 +1,3 @@
+-------------------------------------------------------------------------------->8
+[2025-04-27T10:55:23.197559145Z][docker-desktop.ipc] 541cc062-docker-desktop-cli -> <HOME>/.docker/desktop/backend.sock BackendAPI
+[2025-04-27T10:55:23.197836402Z][docker-desktop.ipc] ca025a6f-docker-desktop-cli -> <HOME>/.docker/desktop/docker-api-proxy-control.sock proxyControl
