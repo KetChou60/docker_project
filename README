@@ -1,0 +1,39 @@
+# Première étape, mettre en place un serveur SSH sur Docker
+
+## 1) Réalisation
+
+### 1.1) Dockerfile
+Création d'une image contenant un serveur SSH fonctionnel, avec un utilisateur `user` ayant des droits sudo sans mot de passe.
+
+### 1.2) docker-compose.yml
+Simplifie la construction et le déploiement du conteneur.
+
+### 1.3) Test SSH
+Connexion réalisée avec `ssh user@localhost` pour valider le bon fonctionnement.
+
+## 2) Difficultés rencontrées
+
+### 2.1) Gestion des erreurs d'installation de paquets sous WSL
+Nécessité de mettre à jour les dépôts ou d'ajouter `apt-get update`.
+
+### 2.2) Compréhension du fonctionnement de Docker Compose
+
+### 2.3) Première approche de Docker
+
+
+# Deuxième étape, création d'un Docker capable d'exécuter une ou plusieurs commandes Ansible
+
+## 1) Réalisation
+
+### 1.1) Création d'un dossier ansible-control
+
+### 1.2) Création d'un Dockerfile pour Ansible
+
+## 2) Difficultés rencontrées
+
+### 2.1) Incompréhension du fonctionnement d'Ansible
+Autant pour Docker j'ai tout compris, mais pour Ansible, j'ai eu du mal à bien assimiler l'automatisation et la possibilité d'accès à plusieurs conteneurs.
+
+### 2.2) Permission denied du Ansible vers le serveur SSH
+
+PS : Par manque de temps, je n'ai pas pu pleinement maîtriser Docker et Ansible, des outils intéressants mais complexes lorsqu'on débute. J'espère pouvoir approfondir mes connaissances sur ces technologies à l'avenir.
